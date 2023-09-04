@@ -6,17 +6,10 @@ public class Node {
     private Node left;
     private Node right;
 
-    public Node(){
-        this("",null);
-    }
-
+   
     public Node(String data){
-        this(data,null);
-    }
-
-    public Node(String data, Node parent){
         this.data = data;
-        this.parent = parent;
+        this.parent = null;
         this.left = null;
         this.right = null;
     }
@@ -52,6 +45,46 @@ public class Node {
     public void setright(Node right){
         this.right = right;
     }
+
+    public boolean isRoot(){
+        return parent == null;
+    }
+
+    public boolean isLeaf(){
+        return left == null && right == null;
+    }
+
+    public int getDegree() {
+        int degree = 0;
+        if (left != null) degree++;
+        if (right != null) degree++;
+        return degree;
+    }
+
+    public int getLevel() {
+        int level = 0;
+        Node current = this;
+        while (current.parent != null) {
+            level++;
+            current = current.parent;
+        }
+        return level;
+    }
+
+    public int getHeight() {
+        int leftHeight = 0;
+        if (left != null) {
+            leftHeight = left.getHeight() + 1;
+        }
+
+        int rightHeight = 0;
+        if (right != null) {
+            rightHeight = right.getHeight() + 1;
+        }
+
+        return Math.max(leftHeight, rightHeight);
+    }
+
 
     @Override
     public String toString(){
