@@ -22,24 +22,24 @@ public class Main {
         tree.setroot(A);
 
         // Exibindo informações dos nós
-        System.out.println(A.getdata() + " isRoot? " + A.isRoot()); 
-        System.out.println(F.getdata() + " isLeaf? " + F.isLeaf());
-        System.out.println(B.getdata() + " degree: " + B.getDegree());
-        System.out.println(E.getdata() + " level: " + E.getLevel());
-        System.out.println(C.getdata() + " height: " + C.getHeight());
+        System.out.println(A.getdata() + " É raiz? " + A.isRoot()); 
+        System.out.println(F.getdata() + " É folha? " + F.isLeaf());
+        System.out.println(B.getdata() + " Grau: " + B.getDegree());
+        System.out.println(E.getdata() + " Nivel: " + E.getLevel());
+        System.out.println(C.getdata() + " Altura: " + C.getHeight());
 
         // Exibindo informações da árvore
-        System.out.println("Tree is empty? " + tree.isEmpty());
-        System.out.println("Tree degree: " + tree.getDegree());  
-        System.out.println("Tree height: " + tree.getHeight());
+        System.out.println("Ta vazia? " + tree.isEmpty());
+        System.out.println("Grau da arvore: " + tree.getDegree());  
+        System.out.println("Tamanho da arvore: " + tree.getHeight());
 
-        System.out.print("In-order traversal: ");
+        System.out.print("Percurso em ordem: ");
         tree.inOrderTraversal();
         
-        System.out.print("\nPre-order traversal: ");
+        System.out.print("\nPercurso em pré-oredem: ");
         tree.preOrderTraversal();
         
-        System.out.print("\nPost-order traversal: ");
+        System.out.print("\nPercurso pós-ordem: ");
         tree.postOrderTraversal();
     }
 
