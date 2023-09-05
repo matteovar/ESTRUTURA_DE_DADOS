@@ -20,16 +20,14 @@ public class Main {
         C.setright(F);
 
         tree.setroot(A);
-
-        // Exibindo informações dos nós
+    
         System.out.println(A.getdata() + " É raiz? " + A.isRoot()); 
         System.out.println(F.getdata() + " É folha? " + F.isLeaf());
         System.out.println(B.getdata() + " Grau: " + B.getDegree());
         System.out.println(E.getdata() + " Nivel: " + E.getLevel());
         System.out.println(C.getdata() + " Altura: " + C.getHeight());
 
-        // Exibindo informações da árvore
-        System.out.println("Ta vazia? " + tree.isEmpty());
+        System.out.println("Arvore vazia? " + tree.isEmpty());
         System.out.println("Grau da arvore: " + tree.getDegree());  
         System.out.println("Tamanho da arvore: " + tree.getHeight());
 
@@ -41,6 +39,7 @@ public class Main {
         
         System.out.print("\nPercurso pós-ordem: ");
         tree.postOrderTraversal();
+        System.out.println("\n");
     }
 
 }
